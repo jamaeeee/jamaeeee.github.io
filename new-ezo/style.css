@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - EZO Kitchen & Sushi Bar</title>
+    <style>
+
+
+
+
+/* General Styles */
+body {
+    font-family: 'K2D', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e0a899;
+}
+
+/* Hero Section */
+.hero {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50vh; /* Full viewport height */
+    background-color: #f8f8f8; /* Optional: Background color */
+}
+
+.hero img {
+    border-radius: 15px;
+    max-width: 100%; /* Ensures the image scales properly */
+    height: auto;
+}
+
+
+
+
+
+
+
+
+/* About Section */
+.about {
+    background-color: #f9f9f9; /* Optional: Add a light background for contrast */
+    padding: 50px 20px; /* Add spacing around the section */
+}
+
+.about-section {
+    max-width: 2200px; /* Limit the width for a clean layout */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.about-content {
+    display: flex; /* Enable Flexbox for side-by-side alignment */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Add space between text and image */
+    gap: 20px; /* Add spacing between child elements */
+}
+
+
+.about-content img {
+    align-self: flex-start; /* Ensure the image aligns to the top */
+    max-width: 40%; /* Adjust the width of the image */
+    height: auto; /* Maintain image aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for aesthetics */
+}
+
+
+
+/* About Images */
+.about-images {
+    display: flex; /* Flexbox for inline image layout */
+    justify-content: right; /* Center-align the images */
+    gap: 15px; /* Space between images */
+    margin-top: 30px; /* Add spacing above the gallery */
+}
+
+.about-images img {
+    max-width: 20%; /* Each image takes up a third of the available width */
+    border-radius: 8px; /* Rounded corners for the gallery images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center text */
+    }
+
+    .about-content img {
+        max-width: 80%; /* Adjust image size for smaller screens */
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .about-images img {
+        max-width: 10%; /* Adjust gallery image sizes */
+    }
+}
+
+
+
+
+
+/* Meet Michael Section */
+.meet-michael {
+    padding: 50px 20px;
+}
+
+.chef-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.chef-item {
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.chef-item img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chef-item p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+}
+
+.footer-contact, .footer-hours {
+    width: 30%;
+    text-align: center;
+}
+
+.footer-contact h2, .footer-hours h2 {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.footer-contact hr, .footer-hours hr {
+    border: none;
+    border-top: 1px solid black;
+    width: 50%;
+    margin: 5px 0 10px;
+}
+
+.footer-contact p, .footer-hours p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.footer-contact p strong, .footer-hours p strong {
+    font-weight: bold;
+}
+
+
+
+
+
+.centered-content {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Aligns items vertically */
+    gap: 20px; /* Adds space between image and text */
+    padding: 20px; /* Adds padding around the content */
+    max-width: 80%; /* Limits the width for better centering */
+    margin: 0 auto; /* Centers the section within the page */
+}
+
+.centered-image {
+    width: 500px; /* Resized image */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 33px; /* Rounds corners */
+}
+
+.text-content {
+    flex: 1; /* Allows text to expand */
+    padding: 10px; /* Adds inner padding */
+    text-align: left; /* Aligns text to the left */
+}
+
+.about-images {
+    display: flex; /* Enables flexbox for alignment */
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Aligns them vertically (useful if images have different heights) */
+    gap: 20px; /* Adds space between the images */
+    flex-wrap: wrap; /* Ensures images wrap to the next line if the screen is too narrow */
+    margin: 20px auto; /* Centers the entire container on the page */
+    padding: 10px; /* Adds padding around the container */
+}
+
+.about-images img {
+    width: 200px; /* Sets a consistent width for the images */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 33px; /* Rounds the corners */
+}
+
+
+/* Philosophy Section Container */
+.philosophy-section {
+    text-align: center; /* Ensures all content inside the section is centered */
+    padding: 20px; /* Adds some spacing around the section */
+}
+
+/* Philosophy Headline */
+.philosophy-section h2 {
+    text-align: center; /* Centers the title */
+    margin: 20px auto; /* Adds spacing above and below the headline */
+    font-size: 2rem; /* Adjusts the font size for emphasis */
+    font-weight: bold; /* Makes the headline stand out */
+}
+
+/* Philosophy Images */
+.philosophy-images {
+    display: flex; /* Enables flexbox for alignment */
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Aligns them vertically (useful for consistency) */
+    gap: 20px; /* Adds space between the images */
+    flex-wrap: wrap; /* Ensures images wrap to the next line if the screen is too narrow */
+    margin: 20px auto; /* Centers the entire container on the page */
+    padding: 10px; /* Adds padding around the container */
+}
+
+/* Philosophy Images Styling */
+.philosophy-images img {
+    height: 550px; /* Sets the fixed height */
+    width: auto; /* Maintains the aspect ratio */
+    border-radius: 33px; /* Rounds the corners */
+}
+
+/* Philosophy Paragraph */
+.philosophy-section p {
+    text-align: center; /* Centers the text horizontally */
+    margin: 20px auto; /* Centers the paragraph block */
+    padding: 20px; /* Adds uniform padding */
+    max-width: 800px; /* Optional: Limits the text width */
+    line-height: 1.6; /* Improves readability */
+    background-color: #f9f9f9; /* Optional: Adds a subtle background */
+    border-radius: 10px; /* Optional: Rounds the corners for a polished look */
+}
+
+
+
+
+/* Review Images */
+.review-item {
+    margin-bottom: 20px; /* Add spacing between each image */
+}
+
+.review-image img {
+    width: 30%; /* Decrease image size to 80% of the container width */
+    height: auto;
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 33px; /* Add 33px border radius to the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a subtle depth */
+    transition: transform 0.3s ease; /* Optional: Add smooth hover effect */
+}
+
+.review-image img:hover {
+    transform: scale(1.05); /* Optional: Slight zoom on hover */
+}
+
+#review h2 {
+    text-align: center; /* Centers the headline */
+    margin-bottom: 20px; /* Optional: Add spacing below the headline */
+}
+
+
+
+
+
+/* Custom styling for horizontal rules */
+hr {
+    border: 0;               /* Removes the default border style */
+    height: 1px;             /* Sets the height of the line */
+    background-color: black; /* Makes the rule black */
+    margin: 10px 0;          /* Adds vertical spacing around the rule */
+}
+
+.menu-category h3 {
+    display: inline-block;   /* Makes the h3 behave like a block but stays inline */
+    position: relative;
+    margin-bottom: 0;        /* Removes default bottom margin */
+}
+
+.menu-category h3::after {
+    content: '';             /* Creates an empty content to style after the h3 */
+    position: absolute;      /* Absolute position relative to h3 */
+    bottom: -10px;           /* Adjusts the rule's position below the h3 */
+    left: 0;
+    width: 100%;             /* Ensures the rule stretches the same length as the h3 */
+    height: 2px;             /* Sets the height of the rule */
+    background-color: black; /* Black color for the rule */
+}
+
+/* Styling for dessert images */
+.dessert-images {
+    display: flex;
+    justify-content: space-between; /* Distribute the images evenly */
+    margin-top: 20px;
+}
+
+.dessert-images img {
+    width: 23%; /* Adjust the width to fit four images in a row */
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners for a soft look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a subtle depth */
+    transition: transform 0.3s ease; /* Optional: Add smooth hover effect */
+}
+
+.dessert-images img:hover {
+    transform: scale(1.05); /* Optional: Slight zoom on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
